@@ -11,7 +11,7 @@ class Meta
     @_insertedAt = @_lastUsedAt = moment()
     @_useCount = 0
 
-  diff : ( now ) => now.diff @_insertedAt
+  diff : ( now ) => now.diff @_lastUsedAt
   use : =>
     @_lastUsedAt = moment()
     @_useCount++
